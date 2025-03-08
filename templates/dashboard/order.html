@@ -15,7 +15,6 @@
                 <table class="table bg-white">
                     <thead class="bg-info">
                         <tr class="text-white">
-                            <th scope="col">#</th>
                             <th scope="col">Product</th>
                             <th scope="col">Category</th>
                             <th scope="col">Quantity</th>
@@ -23,33 +22,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for order in orders %}
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Josh</td>
-                            <td>Gonzalez</td>
-                            <td>(219)222-2222</td>
-                            <td>
-                                Josh
-                            </td>
+                            <td>{{ order.product }}</td>
+                            <td>{{ order.product.category }}</td>
+                            <td>{{ order.order_quantity }}</td>
+                            <td>{{ order.staff }}</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Gonzalez</td>
-                            <td>(219)222-2222</td>
-                            <td>
-                                Jake
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Kiara</td>
-                            <td>Santiago</td>
-                            <td>(219)222-2222</td>
-                            <td>
-                                Kiara
-                            </td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>

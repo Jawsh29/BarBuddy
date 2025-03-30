@@ -5,6 +5,10 @@ from .forms import ProductForm, OrderForm
 from django.contrib.auth.models import User
 from django.db.models import Sum
 
+
+# Views for different objects across site. Also establishes user to login before gaining full access to site data
+
+
 @login_required
 def index(request):
     orders = Order.objects.all()

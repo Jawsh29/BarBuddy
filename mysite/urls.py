@@ -1,5 +1,5 @@
 """
-URL configuration for mysite project.
+URL configuration for BarBuddy project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -19,7 +19,7 @@ from django.urls import path, include
 from User import views as user_views
 from django.contrib.auth import views as auth_views
 
-
+# URLs for different site pages
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dashboard.urls')),

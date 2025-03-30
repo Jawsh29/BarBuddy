@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm
 
-# Create your views here.
+# View for user registration
+
 def register(request):
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
